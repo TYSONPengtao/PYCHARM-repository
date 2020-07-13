@@ -1,8 +1,10 @@
-pi=3.14
-def muliti_circle():
-    r=eval(input("请输入圆的半径："))
-    circleS=pi*r*r
-    circleC=2*pi*r
-    print("当圆的半径为{}时，圆的面积为{}，周长为{}".format(r,circleS,circleC))
-    muliti_circle()
-muliti_circle
+print("<<<<<<<<彭涛>>>>>>>>")
+password=input("请输入你猜的数字：")
+my_anwser=int(password)
+if my_anwser==8:
+    print("good you win!!!")
+elif my_anwser<8:
+    print("猜小了！！！")
+else:
+    print("猜大了！！")
+print("游戏结束！！")
