@@ -1,10 +1,21 @@
-print("<<<<<<<<彭涛>>>>>>>>")
-password=input("请输入你猜的数字：")
-my_anwser=int(password)
-if my_anwser==8:
-    print("good you win!!!")
-elif my_anwser<8:
-    print("猜小了！！！")
-else:
-    print("猜大了！！")
-print("游戏结束！！")
+print("<<<<<<<<猜数字游戏>>>>>>>>")
+import random
+my_screat=random.randint(0,10)
+def guss_number():
+    tries = 3
+    while tries>0:
+        password=input("你有3次机会，请输入你猜的数字：")
+        my_answer=int(password)
+        tries-=1
+        if my_answer==my_screat:
+            print("猜对了！！剩余次数为{}".format(tries))
+            break
+        elif my_answer<my_screat:
+            print("猜小了！！剩余次数为{}".format(tries))
+        elif my_answer>my_screat:
+            print("猜大了！！剩余次数为{}".format(tries))
+        else:
+                print("data eroor!!!")
+    else:
+        print("游戏结束")
+guss_number()
