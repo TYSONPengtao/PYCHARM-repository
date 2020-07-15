@@ -1,16 +1,12 @@
-import random
-password=random.randint(0,10)
-tries=3
-while tries>0:
-    my_answer = int(input("请输入你猜的数字："))
-    tries-=1
-    if my_answer==password:
-        print("猜对了，剩余次数{}".format(tries))
-    elif my_answer>password:
-        print("猜大了，剩余次数{}".format(tries))
-    elif my_answer<password:
-        print("猜小了，剩余次数{}".format(tries))
-    else:
-        print("DATA error!!!")
+my_job=int(input("请输入你的分数："))
+my_show=my_job/10
+if 0<=my_show<6:
+    print("D")
+elif 6<=my_show<8:
+    print("C")
+elif 8<=my_show<=9:
+     print("B")
+elif 9<my_show<=10:
+    print("A")
 else:
-    print("游戏结束！！")
+    print("data error!!!")
