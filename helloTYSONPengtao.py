@@ -1,10 +1,24 @@
-a=float(input("请输入你的小数："))
-b=float(a)
-c=int(a)
-e=b-c
-if e>0:
-    print(format(e,".2f"))
-elif e==0:
-    print(format(c,".2f"))
-else:
-    print("data errir!!!")
+def guss_job():
+    tries=3
+    while tries>0:
+        a=int(input(
+            "请输入你猜的数字a："
+        ))
+        b=int(input(
+            "请输入你猜的数字b："
+        ))
+        if a==b:
+            print(
+            "猜测正确！"
+                  )
+            break
+        else:
+            tries-=1
+            print(
+            "剩余次数为{}"
+            .format(tries))
+    else:
+        print(
+            "次数用完！"
+              )
+guss_job()
