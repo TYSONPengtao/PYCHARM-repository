@@ -1,24 +1,13 @@
-def guss_job():
-    tries=3
-    while tries>0:
-        a=int(input(
-            "请输入你猜的数字a："
-        ))
-        b=int(input(
-            "请输入你猜的数字b："
-        ))
-        if a==b:
-            print(
-            "猜测正确！"
-                  )
-            break
-        else:
-            tries-=1
-            print(
-            "剩余次数为{}"
-            .format(tries))
+a=input("请输入数字a:")
+b=input("请输入数字b:")
+c=input("请输入数字c:")
+print("输入顺序为：",a,b,c)
+if a<b:
+    a,b=b,a
+if a<c:
+    print("顺序为：",c,a,b)
+else:
+    if c>b:
+        print("顺序为：",a,c,b)
     else:
-        print(
-            "次数用完！"
-              )
-guss_job()
+        print("顺序为：",a,b,c)
