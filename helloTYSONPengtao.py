@@ -1,15 +1,7 @@
-from random import randint
-n=randint(10,100)
-print("请输入你猜的价格(10~100)")
-bingo=False
-while bingo==False:
-    my_guss = eval(input("请输入你猜的价格："))
-    if my_guss<n:
-        print("猜小了！！")
-    elif my_guss>n:
-        print("猜大了！！")
-    else:
-        print("猜测正确！！价格是{}".format(my_guss))
-        bingo = True
-else:
-    print("游戏结束！！")
+x=eval(input("请输入你第一个数字："))
+y=eval(input("请输入你第二个数字："))
+if x<y:
+    x,y=y,x
+for i in range(x,x*y+1):
+    if i%x==0 and i%y==0:
+        print(x,"和",y,"的最小公倍数为",i)
