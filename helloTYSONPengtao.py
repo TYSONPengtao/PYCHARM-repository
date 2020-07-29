@@ -1,8 +1,12 @@
-s,n=0,0
-for i in range(1,11):
-    score=eval(input("请输入你的成绩："))
-    if score>=60:
-        s=s+score
-        n+=1
-print("合格人数为：",n)
-print("平均成绩为：",s/n)
+from  time import sleep
+n=eval(input("输入菱形总行数（奇数）："))
+up=int((n+1)/2)
+down=int((n-1)/2)
+for i in range(1,up+1):
+    print(" "*(up-i),end="")
+    print("*"*(2*i-1))
+sleep(0.5)
+for i in range(1,down+1):
+    print(" "*i,end="")
+    print("*"*(n-2*i))
+sleep(0.5)
