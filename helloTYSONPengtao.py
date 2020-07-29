@@ -1,12 +1,14 @@
-from  time import sleep
-n=eval(input("输入菱形总行数（奇数）："))
-up=int((n+1)/2)
-down=int((n-1)/2)
-for i in range(1,up+1):
-    print(" "*(up-i),end="")
-    print("*"*(2*i-1))
-sleep(0.5)
-for i in range(1,down+1):
-    print(" "*i,end="")
-    print("*"*(n-2*i))
-sleep(0.5)
+#海伦公式
+a=eval(input("请输入a边的值："))
+b=eval(input("请输入b边的值："))
+c=eval(input("请输入c边的值："))
+if a>0 and b>0 and c>0:
+    if (b+c>a) and (a+c>b) and (b+a>c):
+        print(a,b,c,"构成三角形")
+        p=(a+b+c)/2
+        s=(p*(p-a)*p*(p-b)*p*(p-c))**0.05
+        print("三角形的面积为：",s,end="")
+    else:
+        print("输入错误！！！")
+else:
+    print("三边必须是正数")
